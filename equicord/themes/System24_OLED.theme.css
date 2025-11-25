@@ -1,0 +1,160 @@
+/**
+ * @name system24 (greyscale)
+ * @description A tui-style discord theme in greyscale with JetBrains Mono.
+ * @author refact0r
+ * @version 1.0.0
+ * @website https://github.com/refact0r/system24
+ */
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+/* import jetbrains mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+body {
+    /* font configuration */
+    --font: 'JetBrains Mono';
+    --code-font: 'JetBrains Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animation/transition options */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    /* top bar options */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    /* dms button options */
+    --custom-dms-icon: hide;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: var(--bg-2);
+
+    /* background image options */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* transparency/blur options */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* other options */
+    --small-user-panel: on;
+
+    /* unrounding options */
+    --unrounding: on;
+
+    /* styling options */
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    /* panel labels */
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* color options */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: #ffffff; /* bright text */
+    --text-2: #e5e5e5; /* headings */
+    --text-3: #a3a3a3; /* normal text */
+    --text-4: #737373; /* icon buttons */
+    --text-5: #525252; /* muted text */
+
+    /* background and dark colors */
+    --bg-1: #262626; /* dark buttons clicked */
+    --bg-2: #171717; /* dark buttons */
+    --bg-3: #0a0a0a; /* spacing/secondary */
+    --bg-4: #000000; /* main background */
+    --hover: hsla(0, 0%, 50%, 0.1);
+    --active: hsla(0, 0%, 50%, 0.2);
+    --active-2: hsla(0, 0%, 50%, 0.3);
+    --message-hover: hsla(0, 0%, 100%, 0.05);
+
+    /* accent colors - Greyscale */
+    --accent-1: #ffffff; /* links */
+    --accent-2: #d4d4d4; /* small accents */
+    --accent-3: #a3a3a3; /* accent buttons */
+    --accent-4: #e5e5e5; /* accent buttons hover */
+    --accent-5: #ffffff; /* accent buttons click */
+    --accent-new: #ffffff;
+
+    /* mention/reply colors */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 80%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 80%) 40%, transparent);
+
+    /* status indicator colors - kept fairly neutral/desaturated */
+    --online: #a3a3a3; 
+    --dnd: #737373; 
+    --idle: #525252;
+    --streaming: #d4d4d4; 
+    --offline: #404040;
+
+    /* border colors */
+    --border-light: var(--hover);
+    --border: var(--active);
+    --border-hover: var(--accent-2);
+    --button-border: hsla(0, 0%, 100%, 0.1);
+
+    /* Base colors required by system24 logic (set to greyscale variants) */
+    --red-1: #e5e5e5;
+    --red-2: #d4d4d4;
+    --red-3: #a3a3a3;
+    --red-4: #737373;
+    --red-5: #525252;
+
+    --green-1: #e5e5e5;
+    --green-2: #d4d4d4;
+    --green-3: #a3a3a3;
+    --green-4: #737373;
+    --green-5: #525252;
+
+    --blue-1: #e5e5e5;
+    --blue-2: #d4d4d4;
+    --blue-3: #a3a3a3;
+    --blue-4: #737373;
+    --blue-5: #525252;
+
+    --yellow-1: #e5e5e5;
+    --yellow-2: #d4d4d4;
+    --yellow-3: #a3a3a3;
+    --yellow-4: #737373;
+    --yellow-5: #525252;
+
+    --purple-1: #e5e5e5;
+    --purple-2: #d4d4d4;
+    --purple-3: #a3a3a3;
+    --purple-4: #737373;
+    --purple-5: #525252;
+}
