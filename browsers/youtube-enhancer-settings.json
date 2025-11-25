@@ -1,0 +1,124 @@
+{
+  "version": "3.0.14",
+  "settings": {
+    "applyvideofilters": false,
+    "backdropcolor": "#000000",
+    "backdropopacity": 85,
+    "blackbars": false,
+    "blockautoplay": true,
+    "blockhfrformats": false,
+    "blockwebmformats": false,
+    "boostvolume": false,
+    "cinemamode": false,
+    "cinemamodewideplayer": false,
+    "controlbar": {
+      "active": false,
+      "autohide": false,
+      "centered": true,
+      "position": "absolute"
+    },
+    "controls": [],
+    "controlsvisible": false,
+    "controlspeed": true,
+    "controlspeedmousebutton": false,
+    "controlvolume": false,
+    "controlvolumemousebutton": false,
+    "convertshorts": false,
+    "customcolors": {
+      "--main-color": "#ff0033",
+      "--main-background": "#111111",
+      "--second-background": "#181818",
+      "--hover-background": "#232323",
+      "--main-text": "#eff0f1",
+      "--dimmer-text": "#cccccc",
+      "--shadow": "#000000"
+    },
+    "customcss": "/* * system24 (Black Edition) for YouTube\n * Based on system24 by refact0r\n */\n\n@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');\n\n:root {\n    /* --- System24 Variables --- */\n    --font-system24: 'DM Mono', monospace;\n    \n    /* Colors - PURE BLACK THEME */\n    --sys-bg-0: #000000; /* Pure Black Background */\n    --sys-bg-1: #0a0a0a; /* Almost Black (for headers/menus) */\n    --sys-bg-2: #1f1f1f; /* Dark Grey (for borders/hover) */\n    \n    --sys-txt-0: #ffffff; /* Bright text */\n    --sys-txt-1: #e5e5e5; /* Normal text */\n    --sys-txt-muted: #888888; /* Muted text */\n    \n    --sys-accent: #ffffff; /* White accent for monochrome look */\n    --sys-accent-hover: #cccccc;\n    \n    /* --- YouTube Variable Overrides --- */\n    --yt-spec-base-background: var(--sys-bg-0) !important;\n    --yt-spec-raised-background: var(--sys-bg-1) !important;\n    --yt-spec-menu-background: var(--sys-bg-1) !important;\n    --yt-spec-text-primary: var(--sys-txt-1) !important;\n    --yt-spec-text-secondary: var(--sys-txt-muted) !important;\n    --yt-spec-brand-icon-active: var(--sys-accent) !important;\n    --yt-spec-wordmark-text: var(--sys-txt-0) !important;\n    --ytd-searchbox-background: var(--sys-bg-0) !important;\n    --ytd-searchbox-text-color: var(--sys-txt-1) !important;\n}\n\n/* Force Font Family */\nbody, button, input, textarea, select, #video-title, #content-text, yt-formatted-string {\n    font-family: var(--font-system24) !important;\n    letter-spacing: -0.05ch !important;\n}\n\n/* --- Unrounding (TUI Style) --- */\n* {\n    border-radius: 0px !important;\n}\n\n/* --- Logo Customization (Greyscale) --- */\n#logo-icon, ytd-topbar-logo-renderer, .ytd-topbar-logo-renderer {\n    filter: grayscale(100%) contrast(1.2) !important;\n}\n\n/* --- Layout & Color Adjustments --- */\n\n/* Main Backgrounds */\nytd-app, #page-manager, #columns {\n    background-color: var(--sys-bg-0) !important;\n}\n\n/* Header / Top Bar */\n#masthead-container, #masthead {\n    background-color: var(--sys-bg-0) !important; /* Made pure black */\n    border-bottom: 2px solid var(--sys-bg-2);\n}\n\n/* Search Box */\nytd-searchbox {\n    border: 2px solid var(--sys-bg-2) !important;\n    box-shadow: none !important;\n}\n#search-icon-legacy {\n    background-color: var(--sys-bg-1) !important;\n    border: none !important;\n    border-left: 2px solid var(--sys-bg-2) !important;\n}\n#search-icon-legacy:hover {\n    background-color: var(--sys-bg-2) !important;\n}\n#search-icon-legacy:hover yt-icon {\n    color: var(--sys-txt-0) !important;\n}\n\n/* Sidebar / Guide */\nytd-guide-renderer, ytd-mini-guide-renderer {\n    background-color: var(--sys-bg-0) !important;\n    border-right: 2px solid var(--sys-bg-2);\n}\nytd-guide-entry-renderer:hover {\n    background-color: var(--sys-bg-2) !important;\n}\nytd-guide-entry-renderer[active] {\n    background-color: var(--sys-bg-2) !important;\n    color: var(--sys-txt-0) !important;\n}\nytd-guide-entry-renderer[active] yt-icon {\n    color: var(--sys-txt-0) !important;\n}\n\n/* Chips (Categories) */\nyt-chip-cloud-chip-renderer {\n    background-color: var(--sys-bg-0) !important;\n    border: 2px solid var(--sys-bg-2) !important;\n    color: var(--sys-txt-muted) !important;\n}\nyt-chip-cloud-chip-renderer[selected] {\n    background-color: var(--sys-bg-2) !important;\n    color: var(--sys-txt-0) !important;\n    border-color: var(--sys-txt-0) !important;\n}\n\n/* Video Cards */\nytd-rich-item-renderer, ytd-compact-video-renderer {\n    background-color: transparent !important;\n}\n#video-title {\n    color: var(--sys-txt-1) !important;\n    font-weight: 500 !important;\n}\n.ytd-channel-name {\n    color: var(--sys-txt-muted) !important;\n}\n\n/* Progress Bar (Monochrome) */\n.ytp-play-progress {\n    background: var(--sys-txt-0) !important;\n}\n.ytp-scrubber-button {\n    background: var(--sys-txt-0) !important;\n    border-radius: 0 !important;\n    transform: scale(0.8);\n}\n.ytp-load-progress {\n    background: var(--sys-bg-2) !important;\n}\n\n/* Subscribe Button */\n#subscribe-button button, .yt-spec-button-shape-next--filled {\n    background-color: var(--sys-txt-0) !important;\n    color: var(--sys-bg-0) !important;\n    text-transform: lowercase !important;\n    font-weight: 700 !important;\n}\n.yt-spec-button-shape-next--tonal {\n    background-color: var(--sys-bg-2) !important;\n    color: var(--sys-txt-1) !important;\n}\n\n/* Comments */\n#content-text {\n    color: var(--sys-txt-1) !important;\n}\n#author-text {\n    color: var(--sys-txt-0) !important;\n    font-weight: 700 !important;\n}",
+    "customscript": "",
+    "customtheme": true,
+    "darktheme": true,
+    "date": 1760974882184,
+    "defaultvolume": false,
+    "disableautoplay": false,
+    "executescript": false,
+    "expanddescription": false,
+    "filter": "none",
+    "griditemsperrow": {
+      "channel": {
+        "shorts": {
+          "apply": false,
+          "count": 5
+        },
+        "videos": {
+          "apply": false,
+          "count": 4
+        }
+      },
+      "posts": {
+        "apply": false,
+        "count": 4
+      },
+      "shorts": {
+        "apply": false,
+        "count": 8
+      },
+      "videos": {
+        "apply": false,
+        "count": 4
+      }
+    },
+    "hidecardsendscreens": false,
+    "hidechat": false,
+    "hidecomments": false,
+    "hiderelated": false,
+    "hideshorts": false,
+    "ignoreplaylists": true,
+    "ignorepopupplayer": true,
+    "localecode": "en_US",
+    "localedir": "ltr",
+    "miniplayer": true,
+    "miniplayerposition": "top-left",
+    "miniplayersize": "480x270",
+    "newestcomments": false,
+    "overridespeeds": true,
+    "pauseforegroundtab": false,
+    "pausevideos": true,
+    "popuplayersize": "640x360",
+    "previousversion": "3.0.13",
+    "qualityembeds": "medium",
+    "qualityembedsfullscreen": "hd1080",
+    "qualityplaylists": "hd720",
+    "qualityplaylistsfullscreen": "hd1080",
+    "qualityvideos": "hd720",
+    "qualityvideosfullscreen": "hd1080",
+    "reload": false,
+    "reversemousewheeldirection": false,
+    "selectquality": false,
+    "selectqualityfullscreenoff": false,
+    "selectqualityfullscreenon": false,
+    "speed": 1,
+    "speedvariation": 0.02,
+    "stopvideos": false,
+    "theatermode": false,
+    "theme": "default-dark",
+    "themevariant": "dark-slate-grey.css",
+    "update": 1761561535878,
+    "vendorthemevariant": "youtube-deep-dark.css",
+    "videofilters": {
+      "blur": 0,
+      "brightness": 100,
+      "contrast": 100,
+      "grayscale": 0,
+      "rotation": 0,
+      "inversion": 0,
+      "saturation": 100,
+      "sepia": 0
+    },
+    "volume": 50,
+    "volumemultiplier": 2,
+    "volumevariation": 5,
+    "whatsnew": false,
+    "wideplayer": false,
+    "wideplayerviewport": false
+  }
+}
